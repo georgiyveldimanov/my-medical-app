@@ -158,7 +158,7 @@ SYSTEM_PROMPT = """
 """
 
 # 4. ФУНКЦИЯ ОТОБРАЖЕНИЯ ВСПЛЫВАЮЩЕГО ОКНА
-@st.experimental_dialog("Экспертное заключение автоматизированного аудита качества медицинской помощи", width="large")
+@st.dialog("Экспертное заключение автоматизированного аудита качества медицинской помощи", width="large")
 def show_audit_result(result_json):
     try:
         json_match = re.search(r"\{.*\}", result_json, re.DOTALL)
